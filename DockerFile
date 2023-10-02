@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+WORKDIR /ahmed
+COPY target/*.jar /ahmed/skiStation.jar
+EXPOSE 9002
+CMD ["java","-jar","/ahmed/skiStation.jar"]
