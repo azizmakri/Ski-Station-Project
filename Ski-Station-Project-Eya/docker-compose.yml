@@ -1,0 +1,18 @@
+version: "3"
+services:
+  skistationproject:
+    image: skistationimage
+    ports:
+      - "9000:8080"
+    networks:
+      - networkSki
+
+  mysqldb:
+    image: mysql:8
+    networks:
+      - networkSki
+    environment:
+      - MYSQL_DATABASE=SkiStationDB
+
+networks:
+  networkSki:
