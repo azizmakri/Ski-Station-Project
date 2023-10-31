@@ -1,7 +1,7 @@
 version: "3"
 services:
   skistationproject:
-    image: skistationimage
+    image: skistation3
     ports:
       - "9000:8080"
     networks:
