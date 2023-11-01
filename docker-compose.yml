@@ -3,7 +3,7 @@ services:
   skistationproject:
     image: skistation3
     ports:
-      - "9000:8080"
+      - "5050:8080"
     networks:
       - networkSki
 
