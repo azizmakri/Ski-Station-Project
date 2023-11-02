@@ -12,7 +12,7 @@ services:
     networks:
       - networkSki
     environment:
-      - MYSQL_DATABASE=SkiStationDB
+      - MYSQL_DATABASE=SkiStationDBamir
 
 networks:
   networkSki:
