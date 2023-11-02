@@ -1,18 +1,32 @@
 version: "3"
 services:
-  skistationproject:
-    image: skistationimage
-    ports:
-      - "5052:8080"
-    networks:
-      - networkSki
 
-  mysqldb:
-    image: mysql:8
-    networks:
-      - networkSki
+
+  skistationproject:
+    build:
+      context: ../Ski-Station-Project
+      dockerfile: Dockerfile
+    container_name: tpAchat
+    image: skistationimage
+    restart: always
+    ports:
+      - "5052:5052"
+    depends_on:
+      - mysql
+    environment:
+      - spring.datasource.url=jdbc:mysql://172.22.0.2:3306/MohamedAzizMakri?createDatabaseIfNotExists=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+      - spring.jpa.show-sql=true
+      - spring.jpa.hibernate.ddl-auto=update
+      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+      - spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
     environment:
       - MYSQL_DATABASE=MohamedAzizMakri
+    ports:
+      - "3307:3306"
 
 networks:
   networkSki:
