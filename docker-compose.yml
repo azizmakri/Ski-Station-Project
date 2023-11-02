@@ -1,0 +1,18 @@
+version: "3"
+services:
+  skistationproject:
+    image: skistation3
+    ports:
+      - "9098:8080"
+    networks:
+      - networkSki
+
+  mysqldb:
+    image: mysql
+    networks:
+      - networkSki
+    environment:
+      - MYSQL_DATABASE=ahmedjebriDB
+
+networks:
+  networkSki:
