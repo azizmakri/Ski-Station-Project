@@ -1,9 +1,9 @@
 version: "3"
 services:
   skistationproject:
-    image: skistation3
+    image: skistationimage
     ports:
-      - "9000:8080"
+      - "5053:8080"
     networks:
       - networkSki
 
@@ -12,7 +12,7 @@ services:
     networks:
       - networkSki
     environment:
-      - MYSQL_DATABASE=SkiStationDB
+      - MYSQL_DATABASE=AichaGasriDB
 
 networks:
   networkSki:
