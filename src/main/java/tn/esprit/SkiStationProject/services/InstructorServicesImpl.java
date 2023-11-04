@@ -13,7 +13,8 @@ import java.util.Set;
 
 @RequiredArgsConstructor
 @Service
-public class InstructorServicesImpl implements IInstructorServices{
+
+    public class InstructorServicesImpl implements IInstructorServices{
 
     private final InstructorRepository instructorRepository;
     private final CourseRepository courseRepository;
