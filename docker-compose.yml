@@ -1,12 +1,5 @@
 version: "3"
 services:
-  skistationproject:
-    image: azizmk12/skistationrepo:latest
-    ports:
-      - "5052:8080"
-    networks:
-      - test123_networkSki
-
   mysqldb:
     image: mysql:8
     networks:
@@ -14,5 +7,11 @@ services:
     environment:
       - MYSQL_DATABASE=MohamedAzizMakri
 
+  skistationproject:
+    image: azizmk12/skistationrepo:latest
+    ports:
+      - "5052:8080"
+    networks:
+      - test123_networkSki
 networks:
-  test123_networkSki:
+  networkSki:
