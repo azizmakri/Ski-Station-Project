@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     def branchName = 'azer'
-                    def gitCredentialId = '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'
+                    def gitCredentialId = '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'
 
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                         checkout([$class: 'GitSCM', 
