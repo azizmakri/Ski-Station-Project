@@ -6,6 +6,7 @@ services:
       - test123_networkSki
     environment:
       - MYSQL_DATABASE=MohamedAzizMakri
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
   skistationproject:
     image: azizmk12/skistationrepo:latest
