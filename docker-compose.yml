@@ -1,7 +1,7 @@
 version: "3"
 services:
   skistationproject:
-    image: azer881/skistationimage:skistationimage
+    image: skistationimage:latest
     ports:
       - "5051:8080"
     networks:
